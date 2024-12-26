@@ -33,7 +33,7 @@ except FileExistsError:
 
 for name in files:
     path = os.path.join(folder_name, name)
-    with open(path, "w", encoding="utf-8") as file:
+    with open(path, "x", encoding="utf-8") as file:
         if name == "memo.md":
             file.write(content)
     print(f"{name}を生成しました。")
