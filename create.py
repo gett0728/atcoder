@@ -2,25 +2,25 @@ import os
 
 folder_name = input()
 files = ["A.py", "B.py", "C.py", "D.py", "E.py", "F.py", "G.py", "memo.md"]
-content = """□A問題
+content = """□A問題  
 
 
-□B問題
+□B問題  
 
 
-□C問題
+□C問題  
 
 
-□D問題
+□D問題  
 
 
-□E問題
+□E問題  
 
 
-□F問題
+□F問題  
 
 
-□G問題
+□G問題  
 
 """
 
