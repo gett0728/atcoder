@@ -1,10 +1,25 @@
-a, b, c = map(int, input().split())
+h, w, x, y = map(int, input().split())
+x -= 1
+y -= 1
+grid = []
+for i in range(h):
+    s = list(input())
+    grid.append(s)
+t = input()
+cnt = 0
 
-if a == b == c:
-    print("Yes")
-    exit()
+for i in range(len(t)):
+    if t[i] == "U" and grid[x-1][y] != "#":
+        x -= 1
+    if t[i] == "D" and grid[x+1][y] != "#":
+        x += 1
+    if t[i] == "L" and grid[x][y-1] != "#":
+        y -= 1
+    if t[i] == "R" and grid[x][y+1] != "#":
+        y += 1
+    
+    if grid[x][y] == "@":
+        cnt += 1
+        grid[x][y] = "."
 
-if a + b == c or b + c == a or c + a == b:
-    print("Yes")
-else:
-    print("No")
+print(x+1, y+1, cnt)
